@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Under Construction</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #1e1e2f;
+      color: #f5f5f5;
+      text-align: center;
+      padding: 16px;
+    }
+
+    .container { max-width: 520px; }
+
+    .icon {
+      font-size: 72px;
+      display: inline-block;
+      animation: swing 2s ease-in-out infinite;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin: 16px 0 8px;
+      color: #ffc107;
+    }
+
+    p {
+      color: #c8c8d8;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .stripe {
+      height: 14px;
+      border-radius: 7px;
+      background: repeating-linear-gradient(
+        45deg, #ffc107 0 20px, #222 20px 40px
+      );
+      margin-bottom: 24px;
+    }
+
+    .progress {
+      background: #33334d;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 12px;
+      margin-bottom: 8px;
+    }
+
+    .progress-bar {
+      width: 70%;
+      height: 100%;
+      background: #ffc107;
+    }
+
+    small { color: #9a9ab0; }
+
+    footer {
+      margin-top: 32px;
+      font-size: 0.85rem;
+      color: #7a7a90;
+    }
+
+    @keyframes swing {
+      0%, 100% { transform: rotate(-10deg); }
+      50%      { transform: rotate(10deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">🚧</div>
+    <h1>Situs Sedang Dibangun</h1>
+    <p>
+      Kami sedang menyiapkan sesuatu yang keren untuk Anda.<br>
+      Silakan kembali lagi dalam waktu dekat!
+    </p>
+
+    <div class="stripe"></div>
+
+    <div class="progress">
+      <div class="progress-bar"></div>
+    </div>
+    <small>Progres: 70%</small>
+
+    <footer>
+      &copy; <span id="year"></span> Nama Website Anda
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
